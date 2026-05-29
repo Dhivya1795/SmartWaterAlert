@@ -1,0 +1,518 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #38bdf8
+  );
+
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+
+  padding:30px;
+
+  color:white;
+}
+
+.container{
+
+  width:55%;
+
+  max-width:1100px;
+}
+
+/* HEADING */
+
+h1{
+
+  text-align:center;
+
+  margin-bottom:30px;
+
+  font-size:42px;
+}
+
+/* TOP SECTION */
+
+.top-section{
+
+  display:flex;
+
+  gap:20px;
+
+  margin-bottom:20px;
+}
+
+.clock-card,
+.goal-card{
+
+  flex:1;
+
+  background:
+  rgba(255,255,255,0.1);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:20px;
+
+  padding:25px;
+
+  text-align:center;
+
+  box-shadow:
+  0 8px 32px rgba(0,0,0,0.2);
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+}
+
+/* REALTIME CLOCK */
+
+.live-time{
+
+  font-size:32px;
+
+  font-weight:bold;
+
+  margin-bottom:14px;
+
+  text-align:center;
+}
+
+.live-day{
+
+  font-size:19px;
+
+  margin-bottom:10px;
+
+  text-align:center;
+}
+
+.live-date{
+
+  opacity:0.9;
+
+  font-size:17px;
+
+  text-align:center;
+}
+
+/* CARD */
+
+.card{
+
+  background:
+  rgba(255,255,255,0.1);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:20px;
+
+  padding:28px;
+
+  margin-bottom:20px;
+
+  box-shadow:
+  0 8px 32px rgba(0,0,0,0.2);
+}
+
+.card h2{
+
+  margin-bottom:20px;
+
+  text-align:center;
+}
+
+/* INPUTS */
+
+input,
+select{
+
+  width:100%;
+
+  padding:18px;
+
+  min-height:60px;
+
+  border:none;
+
+  border-radius:14px;
+
+  font-size:17px;
+
+  outline:none;
+}
+
+/* REMOVE NUMBER INPUT SPINNER */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+
+  -webkit-appearance:none;
+
+  margin:0;
+}
+
+input[type="number"]{
+
+  appearance:textfield;
+
+  -moz-appearance:textfield;
+}
+
+/* GOAL */
+
+.goal-card input{
+
+  margin-top:18px;
+}
+
+.goal-card select{
+
+  margin-top:15px;
+}
+
+.goal-card button{
+
+  margin-top:18px;
+
+  width:100%;
+}
+
+/* CIRCLE */
+
+.circle{
+
+  width:240px;
+  height:240px;
+
+  border-radius:50%;
+
+  margin:30px auto;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+  conic-gradient(
+    #38bdf8 0deg,
+    rgba(255,255,255,0.15) 0deg
+  );
+
+  box-shadow:
+  0 0 15px rgba(56,189,248,0.25);
+
+  transition:0.5s;
+}
+
+.inner-circle{
+
+  width:180px;
+  height:180px;
+
+  background:#0f172a;
+
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:36px;
+  font-weight:bold;
+}
+
+#waterText{
+
+  text-align:center;
+
+  margin-bottom:25px;
+
+  font-size:20px;
+}
+
+/* WATER ENTRY */
+
+.water-entry{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+
+  margin-top:15px;
+}
+
+/* INPUT ROW */
+
+.input-row{
+
+  display:flex;
+
+  gap:12px;
+
+  align-items:center;
+}
+
+/* INPUT */
+
+.input-row input{
+
+  flex:2.2;
+
+  height:62px;
+
+  margin:0;
+}
+
+/* SELECT */
+
+.input-row select{
+
+  flex:1;
+
+  height:62px;
+
+  margin:0;
+
+  padding:18px;
+
+  border:none;
+
+  border-radius:14px;
+
+  font-size:17px;
+
+  position:relative;
+
+  top:-7px;
+}
+
+/* BUTTON ROW */
+
+.button-row{
+
+  display:flex;
+
+  gap:14px;
+}
+
+.button-row button{
+
+  flex:1;
+}
+
+/* BUTTONS */
+
+button{
+
+  padding:14px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:#38bdf8;
+
+  color:white;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+button:hover{
+
+  transform:scale(1.03);
+
+  background:#0ea5e9;
+}
+
+/* REMINDER */
+
+.card select,
+.card button{
+
+  margin-top:15px;
+}
+
+/* SMART MESSAGE */
+
+#statusText{
+
+  text-align:center;
+
+  line-height:1.9;
+
+  font-size:20px;
+
+  padding:10px;
+}
+
+/* ANALYTICS */
+
+.analytics-card{
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border-radius:18px;
+
+  padding:24px;
+
+  margin-top:20px;
+
+  text-align:center;
+
+  box-shadow:
+  0 4px 20px rgba(0,0,0,0.2);
+}
+
+.analytics-percent{
+
+  font-size:44px;
+
+  font-weight:bold;
+
+  margin-bottom:12px;
+}
+
+.analytics-message{
+
+  font-size:18px;
+
+  line-height:1.8;
+}
+
+/* YESTERDAY PROGRESS */
+
+.yesterday-card{
+
+  margin-top:20px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border-radius:18px;
+
+  padding:22px;
+
+  text-align:center;
+
+  box-shadow:
+  0 4px 20px rgba(0,0,0,0.2);
+}
+
+.yesterday-title{
+
+  font-size:22px;
+
+  margin-bottom:14px;
+
+  font-weight:bold;
+}
+
+.yesterday-percent{
+
+  font-size:38px;
+
+  font-weight:bold;
+
+  margin-bottom:12px;
+}
+
+.yesterday-text{
+
+  font-size:18px;
+
+  line-height:1.8;
+}
+
+/* LOGS */
+
+.log-item{
+
+  margin-bottom:18px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  padding:18px;
+
+  border-radius:14px;
+}
+
+.log-content{
+
+  display:flex;
+
+  gap:16px;
+
+  align-items:flex-start;
+}
+
+.log-content input{
+
+  width:18px;
+  height:18px;
+
+  accent-color:#22c55e;
+
+  cursor:pointer;
+
+  margin-top:6px;
+}
+
+.log-content p{
+
+  line-height:2;
+
+  white-space:pre-line;
+
+  font-size:16px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .container{
+
+    width:95%;
+  }
+
+  .top-section{
+
+    flex-direction:column;
+  }
+
+  .input-row{
+
+    flex-direction:column;
+  }
+
+  .button-row{
+
+    flex-direction:column;
+  }
+}

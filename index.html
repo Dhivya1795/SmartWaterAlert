@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Water Alert</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>💧 Smart Water Alert</h1>
+
+    <!-- TOP SECTION -->
+
+    <div class="top-section">
+
+      <!-- CLOCK -->
+
+      <div class="clock-card">
+
+        <div id="clock"></div>
+
+      </div>
+
+      <!-- GOAL -->
+
+      <div class="goal-card">
+
+        <h3>Set Daily Goal</h3>
+
+        <input
+        type="number"
+        id="goalInput"
+        placeholder="Enter amount"
+        min="1"
+        >
+
+        <select id="goalUnit">
+
+          <option value="ml">
+            ml
+          </option>
+
+          <option value="liters">
+            Liters
+          </option>
+
+        </select>
+
+        <button onclick="changeGoal()">
+          Save Goal
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- TODAY PROGRESS -->
+
+    <div class="card">
+
+      <h2>Today's Progress</h2>
+
+      <div class="circle"
+           id="progressCircle">
+
+        <div class="inner-circle">
+
+          <span id="percent">
+            0%
+          </span>
+
+        </div>
+
+      </div>
+
+      <p id="waterText">
+        0 ml / 3000 ml
+      </p>
+
+      <!-- WATER ENTRY -->
+
+      <div class="water-entry">
+
+        <div class="input-row">
+
+          <input
+          type="number"
+          id="waterInput"
+          placeholder="Enter water amount"
+          min="1"
+          >
+
+          <select id="waterUnit">
+
+            <option value="ml">
+              ml
+            </option>
+
+            <option value="liters">
+              Liters
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="button-row">
+
+          <button onclick="addCustomWater()">
+            Add Water
+          </button>
+
+          <button onclick="resetWater()">
+            Reset
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- REMINDER -->
+
+    <div class="card">
+
+      <h2>Reminder Settings</h2>
+
+      <select id="reminderValue">
+
+      </select>
+
+      <select
+      id="reminderUnit"
+      onchange="loadReminderOptions()"
+      >
+
+        <option value="minutes">
+          Minutes
+        </option>
+
+        <option value="hours">
+          Hours
+        </option>
+
+      </select>
+
+      <button onclick="startReminder()">
+        Start Reminder
+      </button>
+
+    </div>
+
+    <!-- SMART MESSAGE -->
+
+    <div class="card">
+
+      <h2>Smart Daily Message</h2>
+
+      <p id="statusText">
+
+        Start drinking water 💧
+
+      </p>
+
+    </div>
+
+    <!-- ANALYTICS -->
+
+    <div class="card">
+
+      <h2>Hydration Analytics</h2>
+
+      <div id="analyticsContainer">
+
+      </div>
+
+      <div id="yesterdayContainer">
+
+      </div>
+
+    </div>
+
+    <!-- MISSED LOGS -->
+
+    <div class="card">
+
+      <h2>Missed Reminder Logs</h2>
+
+      <div id="logs">
+
+        No missed reminders ✅
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
